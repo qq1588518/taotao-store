@@ -75,8 +75,8 @@ public class CartRedisService {
         }
     }
 
-    public List<Cart> getCartList(String cartKey){
-        String key = KEY_STR + cartKey;
-        this.redisService.hgetAll(key);
-    }
+//    public List<Cart> getCartList(String cartKey){
+//        String key = KEY_STR + cartKey;
+//        this.redisService.hgetAll(key);
+//    }
 }

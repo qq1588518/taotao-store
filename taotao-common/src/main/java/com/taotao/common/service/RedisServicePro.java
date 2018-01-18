@@ -1,5 +1,7 @@
 package com.taotao.common.service;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import redis.clients.jedis.ShardedJedis;
@@ -149,13 +151,13 @@ public class RedisServicePro {
         });
     }
 
-    public void hgetAll(String key) {
-        return this.execute(new Function<Long, ShardedJedis>() {
-            @Override
-            public Long callback(ShardedJedis shardedJedis) {
-                return shardedJedis.hgetAll()
-
-            }
-        });
-    }
+//    public Long hgetAll(final String key) {
+//        return this.execute(new Function<Long, ShardedJedis>() {
+//            @Override
+//            public Long callback(ShardedJedis shardedJedis) {
+//                 shardedJedis.hgetAll(key);
+//                 return 1L;
+//            }
+//        });
+//    }
 }
